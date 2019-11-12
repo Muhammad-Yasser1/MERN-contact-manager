@@ -5,7 +5,9 @@ const connectToDatabase = async () => {
     try {
         await mongoose.connect(config.get('atlasUrl'), {
             useNewUrlParser: true,
-            useUnifiedTopology: true
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false
         });
         console.log('Connect to Database Successfully...');
     } catch (err) {

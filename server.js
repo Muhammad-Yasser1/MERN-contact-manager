@@ -8,6 +8,9 @@ app.get('/', (req, res) => {
     res.json({ msg: 'Welcome to Contact Manager API...' });
 });
 
+//middlewares
+app.use(express.json({ extended: false }));
+
 //routes
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
