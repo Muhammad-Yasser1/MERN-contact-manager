@@ -1,0 +1,4 @@
+{
+    "atlasUrl": "mongodb+srv://Muhammad:123456mo@cluster0-uormh.mongodb.net/test?retryWrites=true&w=majority",
+    "secret": "secret"
+}

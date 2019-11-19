@@ -1,26 +1,28 @@
 {
-    "name": "contact-manager",
-    "version": "1.0.0",
-    "description": "MERN Contact Manager App",
-    "main": "index.js",
-    "scripts": {
-        "start": "node server.js",
-        "server": "nodemon server.js",
-        "clientStart": "npm start --prefix client",
-        "clientInstall": "npm install --prefix client",
-        "dev": "concurrently  \"npm run server\" \"npm run clientStart\""
-    },
-    "author": "Muhammad Yasser",
-    "license": "ISC",
-    "dependencies": {
-        "bcryptjs": "^2.4.3",
-        "config": "^3.2.4",
-        "express": "^4.17.1",
-        "joi": "^14.3.1",
-        "jsonwebtoken": "^8.5.1",
-        "mongoose": "^5.7.9"
-    },
-    "devDependencies": {
-        "concurrently": "^5.0.0"
-    }
+  "name": "contact-manager",
+  "version": "1.0.0",
+  "description": "MERN Contact Manager App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "clientStart": "npm run start --prefix client",
+    "clientInstall": "npm install --prefix client",
+    "dev": "concurrently  \"npm run server\" \"npm run clientStart\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Muhammad Yasser",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.9"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0"
+  }
 }
